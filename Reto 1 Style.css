@@ -1,0 +1,168 @@
+body{
+    padding: 0;
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fondo {
+    width:  280px;
+    height: 100px;
+   /* Colocar Imagen de Fondo
+   background-image: url(Image/6106991.jpg); */ 
+   background-color: #283618;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-bottom: #606C38 solid 3px;
+   border-radius: 10px; 
+}
+
+#avatar {
+    height: 80px;
+    position: relative;
+    margin-top: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #606C38;
+}
+
+#miFooter{
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #BC6C25;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+}
+
+#card{
+    border-radius: 15px;
+    background-color: #FEFAE0;
+    width: 280px;
+    height: 350px;
+    position: relative; 
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
+#descripcion {
+    margin: 0px 5px 10px 5px;
+}
+
+h4 {
+    margin-bottom: 0px;
+}
+
+#bandera {
+    width: 20px;
+    margin-right: 10px;
+}
+
+footer svg {
+    padding: 10px;
+    fill: white;
+    height: 25px;
+    transition: transform 3s ease;
+}
+
+
+#edit {
+    fill: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: start;
+    height: 15px;
+    padding: 5px;
+    transition: transform 3s ease;
+}
+
+#edit:hover{
+  fill: #DDA15E;  
+  transform: scale(2);
+}
+
+svg:hover{
+    fill: #DDA15E;
+    transform: scale(2); /* Aumenta el tamaño*/
+    /* filter: hue-rotate(90deg); Cambia el color girando el tono */
+    /* transform: rotate(45deg);  Rota en sentido Horario*/
+}
+
+#formEditar {
+    display: none;
+    background-color: #FEFAE0;
+    
+    width:  280px;
+    height: 350px;
+    border-radius: 10px;
+    margin-left: 10px;
+    
+    
+}
+
+#formEditar h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+#close{
+    fill: red;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    align-items: end;
+    height: 20px;
+    padding: 5px;
+    transition: transform 3s ease;
+}
+
+#contenedor {
+    display: block;
+    position: relative;
+}
+
+#contenedor > div:first-of-type {
+    margin-top: 5px;
+}
+
+
+#contenedor label {
+    margin-left: 10px;
+}
+
+ input {
+    margin: 5px;
+ }
+
+ #ubicacion {
+    display: flex;
+    margin-top: -10px;
+ }
+
+ #social{
+    margin-left: 10px;
+ }
+
+ #paleta1 {
+    height: 20px;
+    border: black solid 2px ;
+    transition: transform 3s ease;
+ }
+
+ #paleta1:hover {
+    transform: scale(2.5);
+ }
