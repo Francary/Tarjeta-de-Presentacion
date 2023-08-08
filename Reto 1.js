@@ -179,7 +179,7 @@ function color(paletaColors){
     document.getElementById('card').style.backgroundColor = arrayPaleta[2];
     document.getElementById('formEditar').style.backgroundColor = arrayPaleta[2];
 
-    for (let i = 5; i <= 8; i++) {
+    for (let i = 1; i <= 8; i++) {
         svgForm(`miSvg${i}`);
       }
 
@@ -190,7 +190,7 @@ function color(paletaColors){
     });
     editElement.addEventListener('mouseout', function() {
         // Vuelve al color de relleno inicial cuando el ratón sale del elemento
-        editElement.style.fill = 'white';
+        editElement.style.fill = arrayPaleta[5];
     });
 
     function agregarEventosHover(valor) {
