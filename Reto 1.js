@@ -1,4 +1,4 @@
-let nombreCompleto = "Perla Carvajal";
+let nombreCompleto = "Francary Molina";
 let direccion = "Buenos Aires , Argentina ";
 let resumen = 'Francary esta continuamente adquiriendo conocimientos para enfrentar los desafios diarios . Actualmente estudiando programacion por Hobby';
 
@@ -16,12 +16,13 @@ let bandera5 = 'Image/Banderas de America del Sur/Bandera de Ecuador.svg';
 let bandera6 = 'Image/Banderas de America del Sur/Bandera de Peru.svg';
 let bandera7 = 'Image/Banderas de America del Sur/Bandera de Uruguay.svg';
 let bandera8 = 'Image/Banderas de America del Sur/Bandera de Venezuela.svg';
-
 const banderas = [bandera0,bandera1,bandera2,bandera3,bandera4,bandera5,bandera6,bandera7,bandera8];
-
 var llamarArray = 0;
 
-
+const paleta0 = ['#606C38','#283618','#FEFAE0','#DDA15E','#BC6C25','black'];
+const paleta2 = ['#8ECAE6','#219EBC','#023047','#FFB703','#FB8500','white'];
+const paleta3 = ['#D3F8E2','#E4C1F9','#F694C1','#EDE7B1','#A9DEF9','black'];
+const paleta4 = ['#F79256','#FBD1A2','#7DCFB6','#00B2CA','#1D4E89','black'];
 
 
 const nombre = document.getElementById('nombre');
@@ -156,257 +157,59 @@ function limpiar(){
     formTiktok.value = "";
 }
 
-
-function instagram2(){
-    if (document.getElementById('checkInstagram').checked){
-    document.getElementById('instagram').style.display = 'block';}
+function redesSociales(valorRedes){
+     vr =   valorRedes ;
+    if (document.getElementById(vr+"2").checked){
+    document.getElementById(vr).style.display = 'block';}
     else {
-        document.getElementById('instagram').style.display = 'none';
-      }
+        document.getElementById(vr).style.display = 'none';
+      }   
 }
+function svgForm(valorID){
+    const svgFormColor = document.getElementById(valorID);
+    svgFormColor.style.fill = arrayPaleta[5];
+} 
 
-function github2(){
-    if (document.getElementById('checkGithub').checked){
-    document.getElementById('github').style.display = 'block';}
-    else {
-        document.getElementById('github').style.display = 'none';
+function color(paletaColors){
+    arrayPaleta = paletaColors;
+
+    document.getElementById('fondo').style.borderBottomColor = arrayPaleta[0] ;
+    document.getElementById('avatar').style.backgroundColor = arrayPaleta[0] ;
+    document.getElementById('fondo').style.backgroundColor = arrayPaleta[1];
+    document.getElementById('card').style.backgroundColor = arrayPaleta[2];
+    document.getElementById('formEditar').style.backgroundColor = arrayPaleta[2];
+
+    for (let i = 5; i <= 8; i++) {
+        svgForm(`miSvg${i}`);
       }
-}
-
-function twitter2(){
-    if (document.getElementById('checkTwitter').checked){
-    document.getElementById('twitter').style.display = 'block';}
-    else {
-        document.getElementById('twitter').style.display = 'none';
-      }
-}
-
-function tiktok2(){
-    if (document.getElementById('checkTiktok').checked){
-    document.getElementById('tiktok').style.display = 'block';}
-    else {
-        document.getElementById('tiktok').style.display = 'none';
-      }
-}
-
-function color2(){
-    document.getElementById('fondo').style.borderBottomColor = '#8ECAE6' ;
-    document.getElementById('avatar').style.backgroundColor = '#8ECAE6' ;
-    document.getElementById('fondo').style.backgroundColor = "#219EBC";
-    document.getElementById('card').style.backgroundColor = '#023047';
-    document.getElementById('formEditar').style.backgroundColor = '#023047';
 
     const editElement = document.getElementById('edit');
     editElement.addEventListener('mouseover', function() {
         // Cambia el color de relleno cuando el ratón está sobre el elemento
-        editElement.style.fill = '#FFB703';
+        editElement.style.fill = arrayPaleta[3];
     });
     editElement.addEventListener('mouseout', function() {
         // Vuelve al color de relleno inicial cuando el ratón sale del elemento
         editElement.style.fill = 'white';
     });
 
-
-    const svgElement = document.getElementById('miSvg1');
-
-    // Añadimos el evento "mouseover"
-    svgElement.addEventListener('mouseover', function() {
-        // Cambia el color de relleno del SVG cuando el ratón está sobre él
-        svgElement.style.fill = '#FFB703';
-    });
-
-    // Añadimos el evento "mouseout"
-    svgElement.addEventListener('mouseout', function() {
-        // Vuelve al color de relleno inicial cuando el ratón sale del SVG
-        svgElement.style.fill = 'white';
-    });
-
-    const svgElement2 = document.getElementById('miSvg2');
-    svgElement2.addEventListener('mouseover', function() {
-        svgElement2.style.fill = '#FFB703';
-    });
-    svgElement2.addEventListener('mouseout', function() {
-        svgElement2.style.fill = 'white';
-    });
-
-    const svgElement3 = document.getElementById('miSvg3');
-    svgElement3.addEventListener('mouseover', function() {
-        svgElement3.style.fill = '#FFB703';
-    });
-    svgElement3.addEventListener('mouseout', function() {
-        svgElement3.style.fill = 'white';
-    });
-
-    const svgElement4 = document.getElementById('miSvg4');
-    svgElement4.addEventListener('mouseover', function() {
-        svgElement4.style.fill = '#FFB703';
-    });
-    svgElement4.addEventListener('mouseout', function() {
-        svgElement4.style.fill = 'white';
-    });
-
-
-    document.getElementById('miFooter').style.backgroundColor = '#FB8500'
-    document.body.style.color = 'white';
-  
-
-    console.log('Hola')
-}
-
-
-
-function color3(){
-    document.getElementById('fondo').style.borderBottomColor = '#D3F8E2' ;
-    document.getElementById('avatar').style.backgroundColor = '#D3F8E2' ;
-    document.getElementById('fondo').style.backgroundColor = "#E4C1F9";
-    document.getElementById('card').style.backgroundColor = '#F694C1';
-    document.getElementById('formEditar').style.backgroundColor = '#F694C1';
-
-    const editElement = document.getElementById('edit');
-    editElement.addEventListener('mouseover', function() {
-        editElement.style.fill = '#EDE7B1';
-    });
-    editElement.addEventListener('mouseout', function() {
-        editElement.style.fill = 'white';
-    });
-
-
-    const svgElement = document.getElementById('miSvg1');
-    svgElement.addEventListener('mouseover', function() {
-        svgElement.style.fill = '#EDE7B1';
-    });
-    svgElement.addEventListener('mouseout', function() {
-         svgElement.style.fill = 'white';
-    });
-
-    const svgElement2 = document.getElementById('miSvg2');
-    svgElement2.addEventListener('mouseover', function() {
-        svgElement2.style.fill = '#EDE7B1';
-    });
-    svgElement2.addEventListener('mouseout', function() {
-        svgElement2.style.fill = 'white';
-    });
-
-    const svgElement3 = document.getElementById('miSvg3');
-    svgElement3.addEventListener('mouseover', function() {
-        svgElement3.style.fill = '#EDE7B1';
-    });
-    svgElement3.addEventListener('mouseout', function() {
-        svgElement3.style.fill = 'white';
-    });
-
-    const svgElement4 = document.getElementById('miSvg4');
-    svgElement4.addEventListener('mouseover', function() {
-        svgElement4.style.fill = '#EDE7B1';
-    });
-    svgElement4.addEventListener('mouseout', function() {
-        svgElement4.style.fill = 'white';
-    });
-
-    document.getElementById('miFooter').style.backgroundColor = '#A9DEF9'
-    document.body.style.color = 'black';
-}
-
-function color4(){
-    document.getElementById('fondo').style.borderBottomColor = '#F79256' ;
-    document.getElementById('avatar').style.backgroundColor = '#F79256' ;
-    document.getElementById('fondo').style.backgroundColor = "#FBD1A2";
-    document.getElementById('card').style.backgroundColor = '#7DCFB6';
-    document.getElementById('formEditar').style.backgroundColor = '#7DCFB6';
-
-    const editElement = document.getElementById('edit');
-    editElement.addEventListener('mouseover', function() {
-        editElement.style.fill = '#00B2CA';
-    });
-    editElement.addEventListener('mouseout', function() {
-        editElement.style.fill = 'white';
-    });
-
-
-    const svgElement = document.getElementById('miSvg1');
-    svgElement.addEventListener('mouseover', function() {
-        svgElement.style.fill = '#00B2CA';
-    });
-    svgElement.addEventListener('mouseout', function() {
-         svgElement.style.fill = 'white';
-    });
-
-    const svgElement2 = document.getElementById('miSvg2');
-    svgElement2.addEventListener('mouseover', function() {
-        svgElement2.style.fill = '#00B2CA';
-    });
-    svgElement2.addEventListener('mouseout', function() {
-        svgElement2.style.fill = 'white';
-    });
-
-    const svgElement3 = document.getElementById('miSvg3');
-    svgElement3.addEventListener('mouseover', function() {
-        svgElement3.style.fill = '#00B2CA';
-    });
-    svgElement3.addEventListener('mouseout', function() {
-        svgElement3.style.fill = 'white';
-    });
-
-    const svgElement4 = document.getElementById('miSvg4');
-    svgElement4.addEventListener('mouseover', function() {
-        svgElement4.style.fill = '#00B2CA';
-    });
-    svgElement4.addEventListener('mouseout', function() {
-        svgElement4.style.fill = 'white';
-    });
-
-    document.getElementById('miFooter').style.backgroundColor = '#1D4E89'
-    document.body.style.color = 'black';
-}
-
-function color1(){
-    document.getElementById('fondo').style.borderBottomColor = '#606C38' ;
-    document.getElementById('avatar').style.backgroundColor = '#606C38' ;
-    document.getElementById('fondo').style.backgroundColor = "#283618";
-    document.getElementById('card').style.backgroundColor = '#FEFAE0';
-    document.getElementById('formEditar').style.backgroundColor = '#FEFAE0';
-
-    const editElement = document.getElementById('edit');
-    editElement.addEventListener('mouseover', function() {
-        editElement.style.fill = '#DDA15E';
-    });
-    editElement.addEventListener('mouseout', function() {
-        editElement.style.fill = 'white';
-    });
-
-
-    const svgElement = document.getElementById('miSvg1');
-    svgElement.addEventListener('mouseover', function() {
-        svgElement.style.fill = '#DDA15E';
-    });
-    svgElement.addEventListener('mouseout', function() {
-         svgElement.style.fill = 'white';
-    });
-
-    const svgElement2 = document.getElementById('miSvg2');
-    svgElement2.addEventListener('mouseover', function() {
-        svgElement2.style.fill = '#DDA15E';
-    });
-    svgElement2.addEventListener('mouseout', function() {
-        svgElement2.style.fill = 'white';
-    });
-
-    const svgElement3 = document.getElementById('miSvg3');
-    svgElement3.addEventListener('mouseover', function() {
-        svgElement3.style.fill = '#DDA15E';
-    });
-    svgElement3.addEventListener('mouseout', function() {
-        svgElement3.style.fill = 'white';
-    });
-
-    const svgElement4 = document.getElementById('miSvg4');
-    svgElement4.addEventListener('mouseover', function() {
-        svgElement4.style.fill = '#DDA15E';
-    });
-    svgElement4.addEventListener('mouseout', function() {
-        svgElement4.style.fill = 'white';
-    });
-
-    document.getElementById('miFooter').style.backgroundColor = '#BC6C25'
-    document.body.style.color = 'black';
+    function agregarEventosHover(valor) {
+        const svgElement = document.getElementById(valor);
+         
+        svgElement.addEventListener('mouseover', function() {
+          svgElement.style.fill = arrayPaleta[3];
+        });
+      
+        svgElement.addEventListener('mouseout', function() {
+          svgElement.style.fill = arrayPaleta[5];
+        });
+      }
+      
+      // Iterar y agregar eventos a cada elemento SVG
+      for (let i = 1; i <= 8; i++) {
+        agregarEventosHover(`miSvg${i}`);
+      }
+ 
+    document.getElementById('miFooter').style.backgroundColor = arrayPaleta[4];
+    document.body.style.color = arrayPaleta[5];
 }
