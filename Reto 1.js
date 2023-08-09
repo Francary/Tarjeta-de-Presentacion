@@ -134,27 +134,17 @@ function cerrar(){
  
 }
 
+const arrayBorrar = ['actualizarNombre','actualizarDireccion','actualizarDescripcion','actualizarInstagram','actualizarGithub','actualizarTwitter','actualizarTiktok']
+
+function borrarTodo(id){
+    const formBorrar = document.getElementById(id);
+    formBorrar.value = ""
+}
+
 function limpiar(){
-    const formNombre = document.getElementById('actualizarNombre');
-    formNombre.value = "";
-
-    const formUbicacion = document.getElementById('actualizarDireccion');
-    formUbicacion.value = "";
-    
-    const formDescripcion = document.getElementById('actualizarDescripcion');
-    formDescripcion.value = "";
-
-    const formInstagram = document.getElementById('actualizarInstagram');
-    formInstagram.value = "";
-
-    const formGithub = document.getElementById('actualizarGithub');
-    formGithub.value = "";
-
-    const formTwitter = document.getElementById('actualizarTwitter');
-    formTwitter.value = "";
-
-    const formTiktok = document.getElementById('actualizarTiktok');
-    formTiktok.value = "";
+  for ( let i = 0; i < arrayBorrar.length; i++){
+    borrarTodo(arrayBorrar[i])
+  }
 }
 
 function redesSociales(valorRedes){
