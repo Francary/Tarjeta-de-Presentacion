@@ -1,6 +1,6 @@
 let nombreCompleto = "Francary Molina";
-let direccion = "Buenos Aires , Argentina ";
-let resumen = 'Francary esta continuamente adquiriendo conocimientos para enfrentar los desafios diarios . Actualmente estudiando programacion por Hobby';
+let direccion = " El Vigia , Venezuela ";
+let resumen = 'Adquiriendo conocimientos constantemente para enfrentar los desafios diarios . Actualmente estudiando programacion por Hobby';
 
 let instagram = "https://www.instagram.com/francarymolinapaez/";
 let github = "https://github.com/Francary";
@@ -17,7 +17,7 @@ let bandera6 = 'Image/Banderas de America del Sur/Bandera de Peru.svg';
 let bandera7 = 'Image/Banderas de America del Sur/Bandera de Uruguay.svg';
 let bandera8 = 'Image/Banderas de America del Sur/Bandera de Venezuela.svg';
 const banderas = [bandera0,bandera1,bandera2,bandera3,bandera4,bandera5,bandera6,bandera7,bandera8];
-var llamarArray = 0;
+var llamarArray = 8;
 
 const paleta0 = ['#606C38','#283618','#FEFAE0','#DDA15E','#BC6C25','black'];
 const paleta2 = ['#8ECAE6','#219EBC','#023047','#FFB703','#FB8500','white'];
