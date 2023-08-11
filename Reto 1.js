@@ -88,7 +88,8 @@ function guardar() {
     urlTiktok.href = tiktok;
     
 
-    document.getElementById('formEditar').style.display = 'none'    
+    document.getElementById('formEditar').style.display = 'none'  
+    document.getElementById('edit').style.display ='block'  
     }
     else{
         alert("Debe Completar todos los Campos")
@@ -125,11 +126,13 @@ function edit(){
     const formTiktok = document.getElementById('actualizarTiktok');
     formTiktok.value = tiktok;
     
+    document.getElementById('edit').style.display ='none'
     
 } 
 
 function cerrar(){
     document.getElementById('formEditar').style.display = 'none'
+    document.getElementById('edit').style.display ='block'
 
  
 }
